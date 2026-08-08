@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 const projects = [
   {
     id: 1,
-    title: "Zomato",
-    image: "/projects/savvy-wealth.png",
+    title: "Complete Zomato Clone",
+    image: "##",
     type: "Full Stack",
     category: "Food Delivery",
   },
@@ -17,7 +17,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Uber",
+    title: "Complete Uber Clone",
     image: "/projects/project-3.png",
     type: "Full Stack",
     category: "Taxi Service",
@@ -227,77 +227,109 @@ const Projects = () => {
                 "
               >
                 {/* Image */}
-                <div
-                  className="
-                    group
-                    relative
-                    aspect-[16/10]
-                    overflow-hidden
-                    rounded-[13px]
-                    bg-sky-100
+                {/* Image */}
+<div
+  className="
+    group
+    relative
+    aspect-[16/10]
+    overflow-hidden
+    rounded-[13px]
+    bg-sky-100
 
-                    max-sm:aspect-[0.98/1]
-                    max-sm:rounded-[11px]
-                  "
-                >
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    draggable="false"
-                    className="
-                      h-full
-                      w-full
-                      select-none
-                      object-cover
+    max-sm:aspect-[0.98/1]
+    max-sm:rounded-[11px]
+  "
+>
+  {project.image ? (
+    <img
+      src={project.image}
+      alt={project.title}
+      draggable="false"
+      onError={(e) => {
+        e.currentTarget.style.display = "none";
+        e.currentTarget.nextElementSibling.style.display = "flex";
+      }}
+      className="
+        h-full
+        w-full
+        select-none
+        object-cover
 
-                      transition-transform
-                      duration-700
-                      ease-out
+        transition-transform
+        duration-700
+        ease-out
 
-                      group-hover:scale-[1.015]
-                    "
-                  />
+        group-hover:scale-[1.015]
+      "
+    />
+  ) : null}
 
-                  {/* Open button */}
-                  <button
-                    className="
-                      absolute
-                      right-3
-                      top-3
+  {/* Coming Soon */}
+  <div
+    className={`
+      absolute
+      inset-0
+      items-center
+      justify-center
+      text-center
+      ${project.image ? "hidden" : "flex"}
+    `}
+  >
+    <span
+      className="
+        text-xl
+        font-semibold
+        tracking-tight
+        text-slate-500
 
-                      flex
-                      h-11
-                      w-11
-                      items-center
-                      justify-center
+        max-sm:text-lg
+      "
+    >
+      Coming Soon..
+    </span>
+  </div>
 
-                      rounded-full
-                      border
-                      border-white/60
-                      bg-white/20
+  {/* Open button */}
+  <button
+    className="
+      absolute
+      right-3
+      top-3
 
-                      text-lg
-                      text-white
+      flex
+      h-11
+      w-11
+      items-center
+      justify-center
 
-                      shadow-sm
-                      backdrop-blur-xl
+      rounded-full
+      border
+      border-white/60
+      bg-white/20
 
-                      transition-all
-                      duration-200
+      text-lg
+      text-white
 
-                      hover:scale-105
-                      hover:bg-white/35
+      shadow-sm
+      backdrop-blur-xl
 
-                      max-sm:right-2.5
-                      max-sm:top-2.5
-                      max-sm:h-9
-                      max-sm:w-9
-                      max-sm:text-base
-                    "
-                  >
-                    ↗
-                  </button>
-                </div>
+      transition-all
+      duration-200
+
+      hover:scale-105
+      hover:bg-white/35
+
+      max-sm:right-2.5
+      max-sm:top-2.5
+      max-sm:h-9
+      max-sm:w-9
+      max-sm:text-base
+    "
+  >
+    ↗
+  </button>
+</div>
 
                 {/* Bottom */}
                 <div
