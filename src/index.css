@@ -1,0 +1,885 @@
+@import "tailwindcss";
+
+
+
+.cloud-track {
+  position: absolute;
+  inset: 0 auto 0 0;
+
+  display: flex;
+  width: max-content;
+  height: 100%;
+
+  will-change: transform;
+  transform: translate3d(-100vw, 0, 0);
+}
+
+.cloud {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  flex: 0 0 100vw;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.cloud::before,
+.cloud::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  filter: blur(35px);
+}
+
+
+
+.cloud-1 {
+  opacity: 0.45;
+}
+
+.cloud-1::before {
+  width: 420px;
+  height: 170px;
+
+  left: 8%;
+  top: 8%;
+}
+
+.cloud-1::after {
+  width: 300px;
+  height: 130px;
+
+  left: 68%;
+  top: 42%;
+}
+
+
+/* Middle */
+
+.cloud-2 {
+  opacity: 0.55;
+}
+
+.cloud-2::before {
+  width: 560px;
+  height: 210px;
+
+  left: 15%;
+  top: 35%;
+}
+
+.cloud-2::after {
+  width: 420px;
+  height: 170px;
+
+  left: 72%;
+  top: 12%;
+}
+
+
+/* Front */
+
+.cloud-3 {
+  opacity: 0.72;
+}
+
+.cloud-3::before {
+  width: 650px;
+  height: 240px;
+
+  left: -12%;
+  top: 62%;
+}
+
+.cloud-3::after {
+  width: 520px;
+  height: 200px;
+
+  left: 72%;
+  top: 55%;
+}
+
+
+/* =========================
+   MOVEMENT
+========================= */
+
+.cloud-slow {
+  animation: cloudMove 110s linear infinite;
+}
+
+.cloud-medium {
+  animation: cloudMove 75s linear infinite;
+}
+
+.cloud-fast {
+  animation: cloudMove 52s linear infinite;
+}
+
+@keyframes cloudMove {
+  from {
+    transform: translate3d(-100vw, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.font-display {
+  font-family: "Archivo Black", sans-serif;
+}
+
+.font-body {
+  font-family: "Inter", sans-serif;
+}
+
+.font-mono {
+  font-family: "DM Mono", monospace;
+}
+
+
+/* =========================
+   GLASS
+========================= */
+
+.glass {
+  background: rgba(255, 255, 255, 0.34);
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 10px 40px rgba(30, 100, 150, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-orange {
+  background: #ff4d1f;
+
+  box-shadow:
+    0 12px 25px rgba(255, 77, 31, 0.25);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.btn-orange:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 32px rgba(255, 77, 31, 0.32);
+}
+
+.btn-orange:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .cloud-track {
+    animation: none;
+  }
+}
+
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects-section {
+    position: relative;
+
+    width: 100%;
+
+    padding-top: 40px;
+    padding-bottom: 70px;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   CAROUSEL
+===================================================== */
+
+.projects-carousel {
+    position: relative;
+
+    width: 100%;
+    height: 570px;
+
+    overflow: visible;
+}
+
+
+/* Track */
+
+.projects-track {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.project-card {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: min(820px, 53vw);
+
+    transform-origin: center center;
+
+    transition:
+        transform 650ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 500ms ease,
+        filter 500ms ease;
+
+    will-change: transform;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   CENTER CARD
+===================================================== */
+
+.project-card.is-active {
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+    opacity: 1;
+
+    filter: none;
+
+    z-index: 10;
+
+    pointer-events: auto;
+}
+
+
+/* =====================================================
+   LEFT CARD
+===================================================== */
+
+.project-card.is-left {
+    transform:
+        translate(
+            calc(-50% - min(43vw, 650px)),
+            -50%
+        )
+        scale(0.82);
+
+    opacity: 0.72;
+
+    filter: brightness(0.88);
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   RIGHT CARD
+===================================================== */
+
+.project-card.is-right {
+    transform:
+        translate(
+            calc(-50% + min(43vw, 650px)),
+            -50%
+        )
+        scale(0.82);
+
+    opacity: 0.72;
+
+    filter: brightness(0.88);
+
+    z-index: 5;
+}
+
+
+/* Hide other cards */
+
+.project-card.is-hidden {
+    transform:
+        translate(-50%, -50%)
+        scale(0.7);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =====================================================
+   CARD FRAME
+===================================================== */
+
+.project-card-inner {
+    padding: 10px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 18px 45px rgba(35, 100, 140, 0.14),
+        0 4px 15px rgba(35, 100, 140, 0.08);
+
+    transition:
+        box-shadow 500ms ease;
+}
+
+
+.project-card.is-active .project-card-inner {
+    box-shadow:
+        0 24px 65px rgba(35, 100, 140, 0.18),
+        0 5px 20px rgba(35, 100, 140, 0.08);
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.project-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    background: #dceef8;
+}
+
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    user-select: none;
+
+    transition:
+        transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.project-card.is-active:hover .project-image img {
+    transform: scale(1.015);
+}
+
+
+/* =====================================================
+   OPEN BUTTON
+===================================================== */
+
+.project-open-button {
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    background: rgba(255, 255, 255, 0.22);
+
+    color: white;
+
+    font-size: 18px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    transition:
+        background 200ms ease,
+        transform 200ms ease;
+}
+
+
+.project-open-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+
+    transform: scale(1.06);
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.project-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 12px 5px 2px;
+}
+
+
+/* Name */
+
+.project-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.project-name h3 {
+    margin: 0;
+
+    color: #172535;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+
+.project-status-dot {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 2px;
+
+    background: #14956c;
+}
+
+
+/* =====================================================
+   TAGS
+===================================================== */
+
+.project-tags {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.project-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    height: 25px;
+
+    padding: 0 10px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(60, 80, 100, 0.12);
+
+    background: rgba(60, 80, 100, 0.04);
+
+    color: #617181;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 0.08em;
+}
+
+
+.project-tag.orange {
+    border-color: rgba(255, 77, 31, 0.25);
+
+    background: rgba(255, 77, 31, 0.07);
+
+    color: #ff4d1f;
+}
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+.projects-controls {
+    position: relative;
+
+    z-index: 20;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   DOTS
+===================================================== */
+
+.projects-dots {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.project-dot {
+    width: 24px;
+    height: 6px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 999px;
+
+    background: rgba(80, 160, 195, 0.35);
+
+    cursor: pointer;
+
+    transition:
+        width 300ms ease,
+        background 300ms ease;
+}
+
+
+.project-dot.active {
+    width: 30px;
+
+    background: #ff4d1f;
+}
+
+
+/* =====================================================
+   ARROWS
+===================================================== */
+
+.projects-arrows {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.project-arrow {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    color: #152333;
+
+    font-size: 24px;
+    line-height: 1;
+
+    box-shadow:
+        0 7px 20px rgba(30, 90, 130, 0.1);
+
+    cursor: pointer;
+
+    transition:
+        transform 180ms ease,
+        background 180ms ease;
+}
+
+
+.project-arrow:hover {
+    transform: translateY(-2px);
+
+    background: white;
+}
+
+
+.project-arrow:active {
+    transform: scale(0.94);
+}
+
+
+.project-arrow:disabled {
+    cursor: default;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .projects-carousel {
+        height: 510px;
+    }
+
+    .project-card {
+        width: min(700px, 65vw);
+    }
+
+    .project-card.is-left {
+        transform:
+            translate(
+                calc(-50% - 48vw),
+                -50%
+            )
+            scale(0.78);
+    }
+
+    .project-card.is-right {
+        transform:
+            translate(
+                calc(-50% + 48vw),
+                -50%
+            )
+            scale(0.78);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 640px) {
+
+    .projects-section {
+        padding-top: 20px;
+
+        padding-bottom: 55px;
+    }
+
+
+    .projects-carousel {
+        height: auto;
+
+        min-height: 470px;
+    }
+
+
+    .project-card {
+        width: calc(100vw - 52px);
+    }
+
+
+    /*
+     * Mobile:
+     * Only active card is visible.
+     */
+
+    .project-card.is-active {
+        transform:
+            translate(-50%, 0)
+            scale(1);
+
+        top: 0;
+    }
+
+
+    .project-card.is-left,
+    .project-card.is-right,
+    .project-card.is-hidden {
+        transform:
+            translate(-50%, 0)
+            scale(0.94);
+
+        top: 0;
+
+        opacity: 0;
+
+        pointer-events: none;
+    }
+
+
+    .project-card-inner {
+        padding: 8px;
+
+        border-radius: 18px;
+    }
+
+
+    .project-image {
+        aspect-ratio: 0.98 / 1;
+
+        border-radius: 11px;
+    }
+
+
+    .project-open-button {
+        width: 38px;
+        height: 38px;
+
+        top: 11px;
+        right: 11px;
+
+        font-size: 16px;
+    }
+
+
+    .project-bottom {
+        padding:
+            12px
+            4px
+            3px;
+
+        gap: 10px;
+    }
+
+
+    .project-name {
+        gap: 8px;
+    }
+
+
+    .project-name h3 {
+        font-size: 17px;
+    }
+
+
+    .project-tags {
+        gap: 4px;
+    }
+
+
+    .project-tag {
+        height: 23px;
+
+        padding: 0 8px;
+
+        font-size: 8px;
+    }
+
+
+    .projects-controls {
+        margin-top: 8px;
+
+        gap: 17px;
+    }
+
+
+    .project-dot {
+        width: 25px;
+        height: 5px;
+    }
+
+
+    .project-dot.active {
+        width: 31px;
+    }
+
+
+    .project-arrow {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+
+        font-size: 22px;
+    }
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .project-card {
+        width: calc(100vw - 36px);
+    }
+
+    .project-name h3 {
+        font-size: 16px;
+    }
+
+    .project-tag {
+        padding: 0 6px;
+
+        font-size: 7px;
+    }
+}
