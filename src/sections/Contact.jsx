@@ -131,7 +131,7 @@ const Contact = () => {
                             {/* Email CTA */}
 
                             <a
-                                href="mailto:ayushyadav8900@email.com"
+                                href="mailto:ayushyadav8900@gmail.com"
                                 className="
                                     group
                                     mt-10
@@ -205,7 +205,7 @@ const Contact = () => {
                                 {/* Email */}
 
                                 <a
-                                    href="mailto:ayushyadav8900@email.com"
+                                    href="mailto:ayushyadav8900@gmail.com"
                                     className="
                                         group
                                         flex
@@ -237,7 +237,7 @@ const Contact = () => {
                                                 text-slate-700
                                             "
                                         >
-                                            ayushyadav8900@email.com
+                                            ayushyadav8900@gmail.com
                                         </p>
                                     </div>
 

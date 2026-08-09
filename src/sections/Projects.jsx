@@ -286,7 +286,7 @@ const Projects = () => {
         max-sm:text-lg
       "
     >
-      Coming Soon..
+      Image Available Soon..
     </span>
   </div>
 
