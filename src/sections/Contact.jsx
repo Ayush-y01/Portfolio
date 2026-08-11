@@ -398,7 +398,7 @@ const Contact = () => {
                     </span>
 
                     <span>
-                        Built with React & Tailwind
+                        Let's Built with Me
                     </span>
                 </div>
 

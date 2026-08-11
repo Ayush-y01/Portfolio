@@ -1,6 +1,7 @@
 import React from "react";
 import {
     siReact,
+    siNextdotjs,
     siJavascript,
     siTypescript,
     siTailwindcss,
@@ -9,11 +10,14 @@ import {
     siPython,
     siMongodb,
     siMysql,
-    siMariadb,
-    siGit,
+    siPostgresql,
+    siLinux,
     siGithub,
-    siVite,
     siFrappe,
+    siDocker,
+    siKubernetes,
+    siPhp,
+    siShopify
 } from "simple-icons/icons";
 
 const skills = [
@@ -26,11 +30,15 @@ const skills = [
     { name: "Python", icon: siPython },
     { name: "MongoDB", icon: siMongodb },
     { name: "MySQL", icon: siMysql },
-    { name: "MariaDB", icon: siMariadb },
-    { name: "Git", icon: siGit },
+    { name: "Postgresql", icon: siPostgresql },
+    { name: "Linux", icon: siLinux },
     { name: "GitHub", icon: siGithub },
-    { name: "Vite", icon: siVite },
+    { name: "Docker", icon: siDocker },
     { name: "Frappe", icon: siFrappe },
+    { name: "Nextjs", icon: siNextdotjs},
+    { name: "Kubernetes", icon: siKubernetes},
+    { name: "PHP", icon: siPhp},
+    { name:"Shopify", icon:siShopify}
 ];
 
 const About = () => {

@@ -212,7 +212,7 @@ const Home = () => {
                     >
 
                         <span>
-                            React · Vue · Node.js · Python
+                            Full Stack Developer
                         </span>
 
                         <span className="hidden sm:block">
