@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const projects = [
   {
     id: 1,
-    title: "Complete Zomato Clone",
+    title: "Zomato Clone",
     image: "##",
     type: "Full Stack",
     category: "Food Delivery",
@@ -17,7 +17,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Complete Uber Clone",
+    title: "Uber Clone",
     image: "/projects/project-3.png",
     type: "Full Stack",
     category: "Taxi Service",

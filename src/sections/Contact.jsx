@@ -30,17 +30,10 @@ const Contact = () => {
                             font-medium
                             uppercase
                             tracking-[0.18em]
-                            text-slate-500
+                            text-slate-900
                         "
                     >
-                        <span
-                            className="
-                                h-1.5
-                                w-1.5
-                                rounded-full
-                                bg-orange-500
-                            "
-                        />
+                        
 
                         Contact
                     </div>
@@ -59,7 +52,7 @@ const Contact = () => {
                         Have an idea?
                         <br />
 
-                        <span className="text-slate-500">
+                        <span className="text-slate-800">
                             Let's talk.
                         </span>
                     </h2>
@@ -103,7 +96,7 @@ const Contact = () => {
                                     max-w-xl
                                     text-base
                                     leading-7
-                                    text-slate-600
+                                    text-slate-800
 
                                     sm:text-lg
                                     sm:leading-8
@@ -120,7 +113,7 @@ const Contact = () => {
                                     max-w-xl
                                     text-base
                                     leading-7
-                                    text-slate-500
+                                    text-slate-700
                                 "
                             >
                                 If you think we could build something
@@ -155,16 +148,7 @@ const Contact = () => {
                             >
                                 Let's work together
 
-                                <span
-                                    className="
-                                        text-lg
-                                        transition-transform
-                                        duration-300
-                                        group-hover:translate-x-1
-                                    "
-                                >
-                                    ↗
-                                </span>
+                                
                             </a>
 
                         </div>
@@ -193,7 +177,7 @@ const Contact = () => {
                                     font-medium
                                     uppercase
                                     tracking-[0.16em]
-                                    text-slate-400
+                                    text-slate-900
                                 "
                             >
                                 Find me online
@@ -225,7 +209,7 @@ const Contact = () => {
                                     "
                                 >
                                     <div>
-                                        <p className="text-xs text-slate-400">
+                                        <p className="text-xs text-slate-900">
                                             Email
                                         </p>
 
@@ -244,7 +228,7 @@ const Contact = () => {
                                     <span
                                         className="
                                             text-lg
-                                            text-slate-400
+                                            text-slate-900
                                             transition-transform
                                             duration-200
                                             group-hover:translate-x-1
@@ -276,11 +260,11 @@ const Contact = () => {
                                         transition-all
                                         duration-200
 
-                                        hover:bg-white/55
+                                        hover:bg-white/45
                                     "
                                 >
                                     <div>
-                                        <p className="text-xs text-slate-400">
+                                        <p className="text-xs text-slate-900">
                                             GitHub
                                         </p>
 
@@ -299,7 +283,7 @@ const Contact = () => {
                                     <span
                                         className="
                                             text-lg
-                                            text-slate-400
+                                            text-slate-900
                                             transition-transform
                                             duration-200
                                             group-hover:translate-x-1
@@ -331,11 +315,11 @@ const Contact = () => {
                                         transition-all
                                         duration-200
 
-                                        hover:bg-white/55
+                                        hover:bg-white/45
                                     "
                                 >
                                     <div>
-                                        <p className="text-xs text-slate-400">
+                                        <p className="text-xs text-slate-900">
                                             LinkedIn
                                         </p>
 
@@ -354,7 +338,7 @@ const Contact = () => {
                                     <span
                                         className="
                                             text-lg
-                                            text-slate-400
+                                            text-slate-900
                                             transition-transform
                                             duration-200
                                             group-hover:translate-x-1
@@ -386,7 +370,7 @@ const Contact = () => {
                         pt-6
 
                         text-xs
-                        text-slate-400
+                        text-slate-900
 
                         sm:flex-row
                         sm:items-center

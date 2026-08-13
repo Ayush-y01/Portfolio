@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+const words = ["web.", "apps.", "deployments."];
+ 
 
 const Home = () => {
+
+    const [index, setIndex] = useState(0);
+
+useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % words.length);
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section
             id="home"
@@ -34,18 +48,10 @@ const Home = () => {
                             gap-3
                             text-sm
                             font-medium
-                            text-slate-600
+                            text-slate-900
                         "
                     >
-                        <span
-                            className="
-                                h-2
-                                w-2
-                                rounded-full
-                                bg-emerald-500
-                                shadow-[0_0_0_5px_rgba(16,185,129,0.12)]
-                            "
-                        />
+                        
 
                         Available for new opportunities
                     </div>
@@ -66,9 +72,15 @@ const Home = () => {
 
                         <br />
 
-                        <span className="text-slate-500">
-                            I build for the web.
-                        </span>
+                       <span className="text-slate-900">
+            I build for the{" "}
+            <span
+                key={index}
+                className="inline-block animate-[fadeIn_0.6s_ease-in-out]"
+            >
+                {words[index]}
+            </span>
+        </span>
                     </h1>
 
 
@@ -80,7 +92,7 @@ const Home = () => {
                             max-w-2xl
                             text-base
                             leading-7
-                            text-slate-600
+                            text-slate-700
 
                             sm:text-lg
                             sm:leading-8
@@ -133,16 +145,7 @@ const Home = () => {
                         >
                             View my work
 
-                            <span
-                                className="
-                                    text-lg
-                                    transition-transform
-                                    duration-300
-                                    group-hover:translate-x-1
-                                "
-                            >
-                                ↗
-                            </span>
+                            
                         </a>
 
 
@@ -159,7 +162,7 @@ const Home = () => {
                                 rounded-full
                                 border
                                 border-white/70
-                                bg-white/30
+                                bg-white/15
                                 px-6
                                 py-3.5
                                 text-sm
@@ -171,7 +174,7 @@ const Home = () => {
                                 transition-all
                                 duration-300
 
-                                hover:bg-white/60
+                                hover:bg-white/50
                                 hover:shadow-lg
 
                                 active:scale-[0.98]
@@ -179,16 +182,7 @@ const Home = () => {
                         >
                             Download Resume
 
-                            <span
-                                className="
-                                    text-base
-                                    transition-transform
-                                    duration-300
-                                    group-hover:translate-y-0.5
-                                "
-                            >
-                                ↓
-                            </span>
+                            
                         </a>
 
                     </div>
@@ -203,7 +197,7 @@ const Home = () => {
                             flex-col
                             gap-4
                             text-xs
-                            text-slate-400
+                            text-slate-800
 
                             sm:flex-row
                             sm:items-center

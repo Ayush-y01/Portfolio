@@ -139,9 +139,7 @@ const Footer = () => {
                         >
                             Get in touch
 
-                            <span className="text-lg">
-                                ↗
-                            </span>
+                            
                         </a>
 
                     </div>

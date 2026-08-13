@@ -17,7 +17,7 @@ import {
     siDocker,
     siKubernetes,
     siPhp,
-    siShopify
+    siShopify,
 } from "simple-icons/icons";
 
 const skills = [
@@ -30,15 +30,15 @@ const skills = [
     { name: "Python", icon: siPython },
     { name: "MongoDB", icon: siMongodb },
     { name: "MySQL", icon: siMysql },
-    { name: "Postgresql", icon: siPostgresql },
+    { name: "PostgreSQL", icon: siPostgresql },
     { name: "Linux", icon: siLinux },
     { name: "GitHub", icon: siGithub },
     { name: "Docker", icon: siDocker },
     { name: "Frappe", icon: siFrappe },
-    { name: "Nextjs", icon: siNextdotjs},
-    { name: "Kubernetes", icon: siKubernetes},
-    { name: "PHP", icon: siPhp},
-    { name:"Shopify", icon:siShopify}
+    { name: "Next.js", icon: siNextdotjs },
+    { name: "Kubernetes", icon: siKubernetes },
+    { name: "PHP", icon: siPhp },
+    { name: "Shopify", icon: siShopify },
 ];
 
 const About = () => {
@@ -55,301 +55,502 @@ const About = () => {
                 xl:px-20
             "
         >
-            <div className="mx-auto max-w-7xl">
+            <div className="mx-auto max-w-6xl">
 
-                {/* =================================================
-                    HEADER
-                ================================================= */}
+                {/* ================= HEADER ================= */}
 
-                <div className="mb-12 max-w-2xl">
+                <div className="mb-16 max-w-3xl">
 
-                    <div
-                        className="
-                            mb-4
-                            flex
-                            items-center
-                            gap-2
+                    <div className="mb-5 flex items-center gap-3">
+                        <span className="h-px w-8 bg-slate-100" />
+
+                        <span className="
                             text-xs
                             font-medium
                             uppercase
-                            tracking-[0.18em]
-                            text-slate-500
-                        "
-                    >
-                        <span
-                            className="
-                                h-1.5
-                                w-1.5
-                                rounded-full
-                                bg-orange-500
-                            "
-                        />
-
-                        About me
+                            tracking-[0.2em]
+                            text-slate-900
+                        ">
+                            About me
+                        </span>
                     </div>
 
                     <h2
                         className="
                             text-4xl
                             font-semibold
-                            tracking-[-0.045em]
+                            leading-[1.05]
+                            tracking-[-0.05em]
                             text-[#172535]
-
                             sm:text-5xl
                             lg:text-6xl
                         "
                     >
-                        I build things for
+                        Developer,
                         <br />
-
-                        <span className="text-slate-500">
-                            the web.
+                        <span className="text-slate-800">
+                            builder & learner.
                         </span>
                     </h2>
 
+                    <p className="
+                        mt-6
+                        max-w-2xl
+                        text-sm
+                        leading-7
+                        text-slate-900
+                        sm:text-base
+                    ">
+                        I enjoy turning ideas into useful digital products,
+                        working across the frontend, backend and everything
+                        in between.
+                    </p>
                 </div>
 
+                {/* ================= MAIN GRID ================= */}
 
-                {/* =================================================
-                    MAIN CONTENT
-                ================================================= */}
+                <div className="
+                    grid
+                    gap-6
+                    lg:grid-cols-[0.9fr_1.1fr]
+                ">
 
-                <div
-                    className="
-                        grid
-                        gap-6
-                        lg:grid-cols-[1fr_1.15fr]
-                    "
-                >
-
-                    {/* =================================================
-                        ABOUT CARD
-                    ================================================= */}
+                    {/* ================= ABOUT CARD ================= */}
 
                     <div
                         className="
+                            group
+                            relative
+                            overflow-hidden
                             rounded-[28px]
                             border
-                            border-white/60
-                            bg-white/[0.28]
+                            border-slate-200/70
+                            bg-white/10
                             p-7
-
-                            shadow-[0_20px_60px_rgba(50,110,150,0.08)]
-
                             backdrop-blur-md
-
+                            transition-all
+                            duration-500
+                            hover:-translate-y-1
+                            hover:border-slate-300
+                            hover:bg-white/20
+                            hover:shadow-[0_25px_70px_rgba(50,80,110,0.08)]
                             sm:p-9
-                            lg:p-10
                         "
                     >
 
-                        <div
-                            className="
-                                flex
-                                h-full
-                                flex-col
-                                justify-between
-                                gap-12
-                            "
-                        >
+                        {/* Decorative gradient */}
+                        <div className="
+                            pointer-events-none
+                            absolute
+                            -right-20
+                            -top-20
+                            h-40
+                            w-40
+                            rounded-full
+                            bg-slate-200/30
+                            blur-3xl
+                            transition-all
+                            duration-500
+                            group-hover:bg-slate-300/30
+                        " />
+
+                        <div className="
+                            relative
+                            flex
+                            h-full
+                            flex-col
+                            justify-between
+                            gap-12
+                        ">
 
                             <div>
 
-                                <p
-                                    className="
-                                        max-w-xl
-                                        text-base
-                                        leading-7
-                                        text-slate-600
+                                <div className="mb-7 flex items-center gap-3">
 
-                                        sm:text-lg
-                                        sm:leading-8
-                                    "
-                                >
-                                    I'm Ayush, a developer who enjoys
-                                    turning ideas into clean,
-                                    interactive and useful digital
+                                    <div className="
+                                        flex
+                                        h-10
+                                        w-10
+                                        items-center
+                                        justify-center
+                                        rounded-xl
+                                        border
+                                        border-slate-200
+                                        bg-white/30
+                                        text-[#172535]
+                                    ">
+                                        <span className="text-sm font-semibold">
+                                            AY
+                                        </span>
+                                    </div>
+
+                                    <div>
+                                        <p className="
+                                            text-xs
+                                            font-medium
+                                            text-slate-900
+                                        ">
+                                            Ayush Yadav
+                                        </p>
+
+                                        <p className="
+                                            mt-0.5
+                                            text-[10px]
+                                            uppercase
+                                            tracking-[0.12em]
+                                            text-slate-900
+                                        ">
+                                            Full Stack Developer
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <p className="
+                                    max-w-xl
+                                    text-base
+                                    leading-7
+                                    text-slate-800
+                                    sm:text-lg
+                                    sm:leading-8
+                                ">
+                                    I'm a developer who enjoys turning ideas
+                                    into clean, interactive and useful digital
                                     experiences.
                                 </p>
 
-                                <p
-                                    className="
-                                        mt-5
-                                        max-w-xl
-                                        text-base
-                                        leading-7
-                                        text-slate-500
-                                    "
-                                >
-                                    I work across the frontend and
-                                    backend, building modern web
-                                    applications with a strong focus
-                                    on performance, simplicity and
-                                    good user experience.
+                                <p className="
+                                    mt-5
+                                    max-w-xl
+                                    text-sm
+                                    leading-7
+                                    text-slate-700
+                                    sm:text-base
+                                ">
+                                    I work across frontend and backend
+                                    development, building modern applications
+                                    with a strong focus on performance,
+                                    simplicity and good user experience.
                                 </p>
 
                             </div>
 
+                            {/* Current status */}
 
-                            {/* Currently */}
+                            <div className="
+                                flex
+                                items-center
+                                justify-between
+                                gap-4
+                                rounded-2xl
+                                border
+                                border-slate-200/80
+                                bg-white/20
+                                px-4
+                                py-4
+                            ">
 
-                            <div
-                                className="
-                                    flex
-                                    items-center
-                                    gap-3
-                                    rounded-2xl
-                                    border
-                                    border-white/70
-                                    bg-white/30
-                                    px-4
-                                    py-3
-                                "
-                            >
+                                <div className="flex items-center gap-3">
 
-                                <span
-                                    className="
-                                        h-2
-                                        w-2
-                                        rounded-full
-                                        bg-emerald-500
-                                        shadow-[0_0_0_4px_rgba(16,185,129,0.12)]
-                                    "
-                                />
+                                    
 
-                                <div>
-                                    <p
-                                        className="
+                                    <div>
+                                        <p className="
                                             text-[10px]
                                             font-medium
                                             uppercase
                                             tracking-[0.15em]
-                                            text-slate-400
-                                        "
-                                    >
-                                        Currently
-                                    </p>
+                                            text-slate-700
+                                        ">
+                                            Currently
+                                        </p>
 
-                                    <p
-                                        className="
+                                        <p className="
                                             mt-0.5
                                             text-sm
                                             font-medium
-                                            text-slate-700
-                                        "
-                                    >
-                                        Building & learning
-                                    </p>
+                                            text-slate-900
+                                        ">
+                                            Building & learning
+                                        </p>
+                                    </div>
+
                                 </div>
+
+                                <span className="
+                                    hidden
+                                    font-mono
+                                    text-[10px]
+                                    text-slate-900
+                                    sm:block
+                                ">
+                                    2026
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {/* ================= SKILLS CARD ================= */}
+
+                    <div
+                        className="
+                            relative
+                            overflow-hidden
+                            rounded-[28px]
+                            border
+                            border-slate-200/70
+                            bg-white/10
+                            p-7
+                            backdrop-blur-md
+                            shadow-[0_20px_60px_rgba(50,110,150,0.05)]
+                            sm:p-9
+                        "
+                    >
+
+                        {/* Header */}
+
+                        <div className="mb-8">
+
+                            <p className="
+                                text-xs
+                                font-medium
+                                uppercase
+                                tracking-[0.16em]
+                                text-slate-700
+                            ">
+                                What I work with
+                            </p>
+
+                            <div className="
+                                mt-2
+                                flex
+                                items-end
+                                justify-between
+                                gap-4
+                            ">
+
+                                <h3 className="
+                                    text-2xl
+                                    font-semibold
+                                    tracking-[-0.03em]
+                                    text-[#172535]
+                                    sm:text-3xl
+                                ">
+                                    Skills & expertise
+                                </h3>
+
+                                <span className="
+                                    hidden
+                                    font-mono
+                                    text-[10px]
+                                    text-slate-900
+                                    sm:block
+                                ">
+                                    18 technologies
+                                </span>
 
                             </div>
 
                         </div>
 
+                        {/* Skills */}
+
+                        <div className="
+                            grid
+                            grid-cols-3
+                            gap-2.5
+                            sm:grid-cols-4
+                            lg:grid-cols-5
+                        ">
+
+                            {skills.map((skill) => (
+                                <div
+                                    key={skill.name}
+                                    title={skill.name}
+                                    className="
+                                        group/skill
+                                        flex
+                                        aspect-square
+                                        flex-col
+                                        items-center
+                                        justify-center
+                                        gap-2
+                                        rounded-2xl
+                                        border
+                                        border-slate-200/70
+                                        bg-white/15
+                                        transition-all
+                                        duration-300
+                                        hover:-translate-y-1
+                                        hover:border-slate-300
+                                        hover:bg-white/50
+                                        hover:shadow-[0_10px_25px_rgba(50,80,110,0.07)]
+                                    "
+                                >
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        className="
+                                            h-7
+                                            w-7
+                                            transition-transform
+                                            duration-300
+                                            group-hover/skill:scale-110
+                                        "
+                                        aria-label={skill.name}
+                                    >
+                                        <path
+                                            d={skill.icon.path}
+                                            fill={`#${skill.icon.hex}`}
+                                        />
+                                    </svg>
+
+                                    <span className="
+                                        max-w-[80px]
+                                        truncate
+                                        text-center
+                                        text-[9px]
+                                        font-medium
+                                        text-slate-900
+                                        transition-colors
+                                        duration-300
+                                        group-hover/skill:text-slate-700
+                                    ">
+                                        {skill.name}
+                                    </span>
+
+                                </div>
+                            ))}
+
+                        </div>
+
                     </div>
 
+                </div>
 
-                    {/* =================================================
-                        SKILLS
-                    ================================================= */}
+                {/* ================= BOTTOM STATS ================= */}
 
-                    <div
-    className="
-        rounded-[28px]
-        border border-white/60
-        bg-white/[0.22]
-        p-7
-        backdrop-blur-md
-        shadow-[0_20px_60px_rgba(50,110,150,0.06)]
+                <div className="
+                    mt-6
+                    grid
+                    grid-cols-2
+                    gap-3
+                    sm:grid-cols-4
+                ">
 
-        sm:p-9
-        lg:p-10
-    "
->
-    <div className="mb-8">
-        <p
-            className="
-                text-xs
-                font-medium
-                uppercase
-                tracking-[0.16em]
-                text-slate-400
-            "
-        >
-            What I work with
-        </p>
+                    <div className="
+                        rounded-2xl
+                        border
+                        border-slate-200/70
+                        bg-white/25
+                        px-5
+                        py-4
+                    ">
+                        <p className="
+                            font-mono
+                            text-xl
+                            font-semibold
+                            text-[#172535]
+                        ">
+                            2+
+                        </p>
 
-        <h3
-            className="
-                mt-1
-                text-2xl
-                font-semibold
-                tracking-[-0.03em]
-                text-[#172535]
-            "
-        >
-            Skills & expertise
-        </h3>
-    </div>
+                        <p className="
+                            mt-1
+                            text-[10px]
+                            uppercase
+                            tracking-[0.12em]
+                            text-slate-900
+                        ">
+                            Years building
+                        </p>
+                    </div>
 
+                    <div className="
+                        rounded-2xl
+                        border
+                        border-slate-200/70
+                        bg-white/25
+                        px-5
+                        py-4
+                    ">
+                        <p className="
+                            font-mono
+                            text-xl
+                            font-semibold
+                            text-[#172535]
+                        ">
+                            18+
+                        </p>
 
-    {/* Icons */}
+                        <p className="
+                            mt-1
+                            text-[10px]
+                            uppercase
+                            tracking-[0.12em]
+                            text-slate-900
+                        ">
+                            Technologies
+                        </p>
+                    </div>
 
-    <div
-        className="
-            grid
-            grid-cols-4
-            gap-3
+                    <div className="
+                        rounded-2xl
+                        border
+                        border-slate-200/70
+                        bg-white/25
+                        px-5
+                        py-4
+                    ">
+                        <p className="
+                            font-mono
+                            text-xl
+                            font-semibold
+                            text-[#172535]
+                        ">
+                            Full
+                        </p>
 
-            sm:grid-cols-5
-            lg:grid-cols-6
-        "
-    >
-        {skills.map((skill) => (
-            <div
-                key={skill.name}
-                title={skill.name}
-                className="
-                    group
-                    flex
-                    aspect-square
-                    items-center
-                    justify-center
-                    rounded-2xl
-                    border
-                    border-white/70
-                    bg-white/30
+                        <p className="
+                            mt-1
+                            text-[10px]
+                            uppercase
+                            tracking-[0.12em]
+                            text-slate-900
+                        ">
+                            Stack focus
+                        </p>
+                    </div>
 
-                    transition-all
-                    duration-300
+                    <div className="
+                        rounded-2xl
+                        border
+                        border-slate-200/70
+                        bg-white/25
+                        px-5
+                        py-4
+                    ">
+                        <p className="
+                            font-mono
+                            text-xl
+                            font-semibold
+                            text-[#172535]
+                        ">
+                            ∞
+                        </p>
 
-                    hover:-translate-y-1
-                    hover:bg-white/60
-                    hover:shadow-sm
-                "
-            >
-                <svg
-                    viewBox="0 0 24 24"
-                    className="
-                        h-7
-                        w-7
-                        fill-current
-                        text-slate-600
-
-                        transition-all
-                        duration-300
-
-                        group-hover:scale-110
-                        group-hover:text-[#172535]
-                    "
-                    aria-label={skill.name}
-                >
-                    <path d={skill.icon.path} />
-                </svg>
-            </div>
-        ))}
-    </div>
-</div>
+                        <p className="
+                            mt-1
+                            text-[10px]
+                            uppercase
+                            tracking-[0.12em]
+                            text-slate-900
+                        ">
+                            Things to learn
+                        </p>
+                    </div>
 
                 </div>
 
